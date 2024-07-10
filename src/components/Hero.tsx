@@ -23,8 +23,9 @@ const Hero = (props: Props) => {
             </div>
 
             <div className="flex justify-between text-[20px] font-helvetica-compressed text-primary border border-[#36156640] border-x-0 border-y-[1px] mt-20">
-                <div>
-                    <span className='flex gap-2 justify-star'><img src="/assets/icons/calendar.svg" alt="" /> <p className='flex'>26th - 31st<span className='block mt-[-10px]'>August, 2024</span></p></span>
+                <div className="flex flex-row justify-between items-center gap-2">
+                    <img src="/assets/icons/calendar.svg" alt="" />
+                    <p className='flex'>26th - 31st</p> <span className='block'> August, 2024</span>
                 </div>
                 <div className='flex md:flex-row flex-col items-center justify-center gap-2'><img src="/assets/genZ.svg" alt="genZ Techies" className="w-[53px]" /><img src="/assets/icons/times.svg" alt="" className="w-[24px]" /><img src="/assets/codeSpace.svg" alt="" className="w-[153px] h-[21px]" /></div>
                 <div> <span className="flex gap-2"><img src="/assets/icons/location.svg" alt="" className="inline" /> <p>Random Hall,<span className='block mt-[-10px]'>Lagos, Nigeria</span></p></span>

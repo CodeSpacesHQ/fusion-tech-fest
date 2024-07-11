@@ -5,9 +5,9 @@ type Props = {}
 
 const Hero = (props: Props) => {
     return (
-        <main className='bg-neutral-white p-10 md:p-20 text-center text-primary'>
+        <main className='bg-neutral-white p-10 md:p-20 h-full text-center text-primary'>
 
-            <div><div className="text-[20px] font-helvetica-compressed flex gap-f2 justify-center ">
+            <div className="pt-32"><div className="text-[20px] font-helvetica-compressed flex gap-f2 justify-center ">
                 <span className='bg-secondary rounded-full py-[8px] px-[15px]'>EXPLORE</span>
                 <img src="/assets/icons/Ellipse.svg" alt="" />
                 <span className='bg-secondary rounded-full py-[8px] px-[15px]'>NETWORK</span>

@@ -6,8 +6,10 @@ import Hero from '../components/Hero'
 
 const Home = () => {
     return (
-        <div><Header />
-            <Hero /></div>
+        <div>
+            <Header />
+            <Hero />
+        </div>
     )
 }
 

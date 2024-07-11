@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.outlined-text {
+    font-size: 50px;
+    font-weight: 500;
+    text-shadow: 
+        3px 0 0 #D1A4FF, 
+        -3px 0 0 #D1A4FF, 
+        0 3px 0 #D1A4FF, 
+        0 -3px 0 #D1A4FF, 
+        3px 3px 0 #D1A4FF, 
+        -3px -3px 0 #D1A4FF, 
+        3px -3px 0 #D1A4FF, 
+        -3px 3px 0 #D1A4FF;
+}
+
+.border-gradient {
+    position: relative;
+    border-image: linear-gradient(to right, transparent, #36156640, transparent) 1;
+}
+
+
+@media (min-width: 768px) {
+    .outlined-text {
+        font-size: 120px;
+    }
+}

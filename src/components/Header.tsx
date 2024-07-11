@@ -14,7 +14,8 @@ const Header: React.FC = (props: Props) => {
         setIsToggle(i => !i);
     }
     return (
-        <nav className="sm:py-10 sm:px-20 px-7 py-12 bg-neutral-white" ><div className="p-3 flex justify-between border-[#36156640] rounded-full border items-center  ">
+        <nav className="sm:py-10 sm:px-20 px-7 py-12 bg-neutral-white" >
+            <div className="p-3 flex justify-between border-[#36156640] rounded-full border items-center  bg-white">
             <div>
                 <img src={Logo} alt="Fusion Tech Logo" />
             </div>

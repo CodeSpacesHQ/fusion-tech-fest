@@ -1,11 +1,11 @@
-import React from 'react'
-import arrowRight from "/assets/icons/arrowRight.svg"
+import React from "react";
+import arrowRight from "/assets/icons/arrowRight.svg";
 
-type Props = {}
+type Props = {};
 
-const Hero = (props: Props) => {
+const Hero: React.FC = (props: Props) => {
     return (
-        <main className='bg-neutral-white p-10 md:p-24 text-center text-primary'>
+        <main className='bg-neutral-white p-10 bg-[url("/assets/mobileBg.png")] sm:bg-[url("/assets/desktopBg.png")] md:p-24 text-center text-primary'>
 
             <div><div className="text-[20px] font-helvetica-compressed flex gap-f2 justify-center ">
                 <span className='bg-secondary rounded-full py-[8px] px-[15px]'>EXPLORE</span>
@@ -19,7 +19,6 @@ const Hero = (props: Props) => {
                     <h1 className='text-[50px] md:text-[120px] font-[500] font-helvetica-compressed border-[#D1A4FF] outlined-text'>FUSION TECH FEST 2024</h1>
                     <p className="text-center text-base sm:text">Get ready to dive into the future at Fusion Tech Fest! Join us for an unforgettable experience where groundbreaking innovation, cutting-edge creativity, and dynamic collaboration converge. Immerse yourself in a world of technological marvels, connect with industry leaders, and be inspired by visionary thinkers. Don't miss this chance to be part of an event that will shape the future of technology.</p >
                 </div>
-                <div><button className="bg-secondary py-2 px-4 rounded-full text-primary border-primary border shadow-[2px_4px_0_0_#361566]"><a href="#">Register <img src={arrowRight} alt="arrowright" className="inline" /></a></button></div>
             </div>
 
             <div className="mx-auto mt-20 w-full md:w-[50%]">
@@ -45,11 +44,7 @@ const Hero = (props: Props) => {
                     </div>
                 </div>
         </main>
-    )
-}
+    );
+};
 
-
-
-
-
-export default Hero
+export default Hero;

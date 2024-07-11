@@ -1,13 +1,13 @@
-import React from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Sponsor from "../components/Sponsor";
 import About from "../components/About";
 import EventSchedule from "../components/EventSchedule";
+import KeynoteSpeakers from "../components/keynote";
+import Gallery from "../components/gallery";
 
-type Props = {};
 
-const Home = (props: Props) => {
+const Home = () => {
     return (
         <div>
             <Header />
@@ -15,6 +15,8 @@ const Home = (props: Props) => {
             <Sponsor />
             <About />
             <EventSchedule />
+            <KeynoteSpeakers />
+            <Gallery />
         </div>
     );
 };

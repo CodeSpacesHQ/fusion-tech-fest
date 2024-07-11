@@ -1,44 +1,67 @@
-type Props = {};
+import { Box, Text, Image, Flex, Container } from "@chakra-ui/react";
+import SectionTitle from "./SectionTitle";
 
-const About: React.FC = (props: Props) => {
+
+const About= () => {
   return (
-    <section id="about" className="py-10">
-      <div className="m text-center">
-        <span className="bg-secondary rounded-full py-[8px] px-[15px]   font-[500] text-[16px] md:text-[20px] text-primary font-helvetica-compressed text-center">
-          ABOUT US{" "}
-        </span>
-      </div>
-      <div className="md:p-20 p-8">
-        <p className="font-helvetica-light font-400] text-base md:text-[22px] text-primary">
+    <Container maxW={"7xl"} as="section" id="about" py={20}>
+        <SectionTitle title="ABOUT US" />
+      
+      <Box pb={{ base: 8, md: 20 }}>
+        <Text
+          fontFamily="helvetica-light"
+          fontWeight={400}
+          fontSize={{ base: "base", md: "22px" }}
+          color="#361566"
+          textAlign="center"
+        >
           Fusion Tech Fest is a pioneering event hosted by{" "}
-          <span className="font-[700]">Genz Techies</span> and{" "}
-          <span className="font-[700]">Code Space</span> to unite GenZ tech
-          enthusiasts in a collaborative endeavor to push the boundaries of
-          innovation and technology. Under the theme{" "}
-          <span className="font-[700]">
-            "Collaborative Minds, Limitless Possibilities,"{" "}
-          </span>{" "}
+          <Text as="span" fontWeight={700}>
+            Genz Techies
+          </Text>{" "}
+          and{" "}
+          <Text as="span" fontWeight={700}>
+            Code Space
+          </Text>{" "}
+          to unite GenZ tech enthusiasts in a collaborative endeavor to push the
+          boundaries of innovation and technology. Under the theme{" "}
+          <Text as="span" fontWeight={700}>
+            "Collaborative Minds, Limitless Possibilities,"
+          </Text>{" "}
           we aim to showcase the transformative power of teamwork and innovative
           thinking in tech. There will be a virtual hackathon from{" "}
-          <span className="font-[700]">August 26th </span>to{" "}
-          <span className="font-[700]">30th</span> and a one-day conference on{" "}
-          <span className="font-[700]">August 31st</span> will serve as a beacon
-          for aspiring tech pioneers and seasoned professionals alike.
-        </p>
-        <div className="mt-10">
-          <img
+          <Text as="span" fontWeight={700}>
+            August 26th
+          </Text>{" "}
+          to{" "}
+          <Text as="span" fontWeight={700}>
+            30th
+          </Text>{" "}
+          and a one-day conference on{" "}
+          <Text as="span" fontWeight={700}>
+            August 31st
+          </Text>{" "}
+          will serve as a beacon for aspiring tech pioneers and seasoned
+          professionals alike.
+        </Text>
+        <Box mt={10}>
+          <Image
             src="/assets/aboutDesktop.png"
-            alt=""
-            className="max-w-full hidden md:block"
+            alt="About Desktop"
+            display={{ base: "none", md: "block" }}
+            mx="auto"
+            maxW="100%"
           />
-          <img
+          <Image
             src="/assets/aboutMobile.png"
-            alt=""
-            className="max-w-full md:hidden block"
+            alt="About Mobile"
+            display={{ base: "block", md: "none" }}
+            mx="auto"
+            maxW="100%"
           />
-        </div>
-      </div>
-    </section>
+        </Box>
+      </Box>
+    </Container>
   );
 };
 

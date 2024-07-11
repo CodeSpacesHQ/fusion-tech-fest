@@ -1,29 +1,36 @@
+import { Box, Flex, Image } from "@chakra-ui/react";
 import React from "react";
+import SectionTitle from "./SectionTitle";
 
-type Props = {};
+const sponsors: {name:string, image:string}[] = [
+    {name:"oulne", image:"/oulne.png"},
+    {name:"Paystack", image:"/paystack.png"},
+    {name:"Chimoney", image:"/chimoney.png"},
+    {name:"Sail Innovation Lab", image:"/sil.png"},
+    {name:"vercel", image:"/vercel.png"},
+    {name:"kora", image:"/kora.png"},
+    {name:"Ingressive For Good", image:"/ifg.png"},
+    {name:"Treford", image:"/treford.png"},
+    {name:"NexaScale", image:"/nexascale.png"},
+]
 
-const Sponsor: React.FC = (props: Props) => {
+const Sponsor: React.FC = () => {
     return (
-        <section id="sponsor" className="p-8 sm:p-20 py-16">
-            <div className="mb-6 text-center">
-                <span className="bg-secondary rounded-full py-[8px] px-[15px]   font-[500] text-[16px] md:text-[20px] text-primary font-helvetica-compressed text-center">
-                    SPONSORS AND PARTNERS
-                </span>
-            </div>
-
-            <div className="mt-10">
-                <img
-                    src="/assets/logosDesktop.png"
-                    alt=""
-                    className="max-w-full hidden md:block px-10"
-                />
-                <img
-                    src="/assets/logosMobile.png"
-                    alt=""
-                    className="max-w-full md:hidden block"
-                />
-            </div>
-        </section>
+        <Box my={10}>
+            <SectionTitle title="SPONSORS AND PARTNERS" />
+            <Flex mt={20} justifyContent={"space-around"} alignItems={"center"}>
+            <Box w={["100%","80%","60%"]} className="mx-auto flex flex-wrap justify-center gap-5">
+                {sponsors.map((sponsor, index) => (
+                    <div
+                    key={index}
+                    className="flex justify-center items-center w-1/2 md:w-1/4 lg:w-1/6"
+                    >
+                    <Image src={sponsor.image} alt={sponsor.name} height={"36px"} />
+                    </div>
+                ))}
+            </Box>
+            </Flex>
+        </Box>
     );
 };
 

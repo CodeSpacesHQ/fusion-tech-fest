@@ -1,3 +1,6 @@
+import { Container } from "@chakra-ui/react";
+import SectionTitle from "./SectionTitle";
+
 const eventSchedules = [
     {
         title: "PANEL SESSIONS  ",
@@ -12,7 +15,8 @@ const eventSchedules = [
 
 const EventSchedule = () => {
   return (
-    <div className="space-y-4 container mx-auto px-10">
+    <Container pb={{ base: 8, md: 20 }} maxW={"6xl"} className="space-y-4  mx-auto px-10">
+        <SectionTitle title="Event Schedule" />
       {eventSchedules.map((event, index) => (
         <div key={index} className="bg-[#FFFAF0] gap-2 items-center border border-[#361566] p-4 md:p-6 rounded-[8px] flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-4">
         <div className="flex items-center justify-between" style={{width:"30%"}}>
@@ -39,7 +43,7 @@ const EventSchedule = () => {
           
         </div>
       ))}
-    </div>
+    </Container>
   );
 };
 
